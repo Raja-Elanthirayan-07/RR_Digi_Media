@@ -4,7 +4,7 @@ const trustItems = ['Fast Service', 'Affordable Pricing', 'Quality Printing']
 
 const stats = [
   { number: '500+', label: 'Happy Clients' },
-  { number: '10+', label: 'Years Experience' },
+  { number: '20+', label: 'Years Experience' },
   { number: '15+', label: 'Print Services' },
 ]
 

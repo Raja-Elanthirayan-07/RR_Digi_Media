@@ -15,8 +15,8 @@ export const printCategories: PrintCategory[] = [
     title: 'Normal Flex',
     items: [
       { label: 'Design + Print (above 100 sq.ft)', price: '₹10 / sq.ft' },
-      { label: 'Design + Print (below 100 sq.ft)', price: '₹10 piece rate' },
-      { label: 'Print Only', price: '₹7 / sq.ft' },
+      { label: 'Design + Print (below 100 sq.ft)', price: '₹10 / piece' },
+      { label: 'Print Only (without design)', price: '₹7 / sq.ft' },
     ],
   },
   {
@@ -39,7 +39,7 @@ export const printCategories: PrintCategory[] = [
     id: 'lithos',
     title: 'Lithos',
     items: [
-      { label: 'Design + Print (above 100 pieces)', price: '₹1600 per 100 nos' },
+      { label: 'Design + Print (above 100 pieces)', price: '₹1600' },
       { label: 'Print Only (100 nos)', price: '₹950' },
     ],
   },
