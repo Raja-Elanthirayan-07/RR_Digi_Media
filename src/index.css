@@ -8,14 +8,23 @@
   }
   body {
     @apply bg-brand-bg text-brand-text font-sans;
+    text-rendering: optimizeLegibility;
   }
+  ::selection { @apply bg-brand-primary text-white; }
+  :focus-visible { outline: 2px solid #A9472C; outline-offset: 3px; }
 }
 
 @layer utilities {
-  .text-gradient {
-    background: linear-gradient(135deg, #D92B2B 0%, #F47920 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-  }
+  .eyebrow { @apply text-[0.68rem] font-bold uppercase tracking-[0.22em] text-brand-primary; }
+  .display { @apply font-display tracking-[-0.035em]; }
+  .rule { @apply h-px w-12 bg-brand-secondary; }
+  .paper-grid { background-image: linear-gradient(rgba(32,37,37,.045) 1px, transparent 1px), linear-gradient(90deg, rgba(32,37,37,.045) 1px, transparent 1px); background-size: 26px 26px; }
+  .ink-button { @apply inline-flex items-center justify-center bg-brand-primary px-5 py-3 text-sm font-bold text-white transition duration-200 hover:bg-[#873923] active:translate-y-px; }
+  .outline-button { @apply inline-flex items-center justify-center border border-brand-text px-5 py-3 text-sm font-bold text-brand-text transition duration-200 hover:bg-brand-text hover:text-white; }
+  .hero-in { animation: rise .7s cubic-bezier(.2,.7,.2,1) both; }
+  .hero-in-delay { animation: rise .7s .14s cubic-bezier(.2,.7,.2,1) both; }
+  .hero-in-late { animation: rise .7s .28s cubic-bezier(.2,.7,.2,1) both; }
 }
+
+@keyframes rise { from { opacity: 0; transform: translateY(18px); } to { opacity: 1; transform: translateY(0); } }
+@media (prefers-reduced-motion: reduce) { *, ::before, ::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; scroll-behavior: auto !important; transition-duration: .01ms !important; } }

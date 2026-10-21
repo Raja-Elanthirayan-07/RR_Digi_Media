@@ -5,18 +5,19 @@ export default {
     extend: {
       colors: {
         brand: {
-          primary: '#D92B2B',
-          secondary: '#F47920',
-          dark: '#1A1A1A',
-          charcoal: '#2D2D2D',
-          bg: '#F9F9F9',
-          text: '#1E1E1E',
-          muted: '#6B6B6B',
-          light: '#FFF5F0',
+          primary: '#A9472C',
+          secondary: '#B69A6A',
+          dark: '#202525',
+          charcoal: '#354040',
+          bg: '#F4F0E8',
+          text: '#202525',
+          muted: '#687070',
+          light: '#E9E1D4',
         },
       },
       fontFamily: {
-        sans: ['Inter', 'system-ui', 'sans-serif'],
+        sans: ['DM Sans', 'system-ui', 'sans-serif'],
+        display: ['DM Serif Display', 'Georgia', 'serif'],
       },
     },
   },

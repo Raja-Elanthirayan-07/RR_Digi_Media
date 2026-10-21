@@ -1,83 +1,8 @@
-const features = [
-  {
-    emoji: '💰',
-    title: 'Affordable Pricing',
-    description:
-      'Competitive rates for every budget. Bulk discounts available for large orders.',
-  },
-  {
-    emoji: '⚡',
-    title: 'Fast Turnaround',
-    description: 'Same day and next day delivery options for urgent requirements.',
-  },
-  {
-    emoji: '🎨',
-    title: 'Custom Design Support',
-    description:
-      'Our team helps you design from scratch or works with your existing artwork.',
-  },
-  {
-    emoji: '✅',
-    title: 'Quality Materials',
-    description: 'We use premium inks and materials to ensure prints that last.',
-  },
-  {
-    emoji: '🤝',
-    title: 'Local Customer Service',
-    description:
-      'Walk in, call, or WhatsApp - real people, real support, every time.',
-  },
-  {
-    emoji: '📦',
-    title: 'Bulk Order Capability',
-    description:
-      'Equipped to handle large volume orders without compromising quality.',
-  },
+const qualities = [
+  ['01', 'Local, in-person service', 'Bring in an idea, an existing design, or a reference — and discuss the practical details face to face.'],
+  ['02', 'Design to display', 'From artwork support through printed output, select the format that fits where your message needs to appear.'],
+  ['03', 'A considered range', 'Choose from display printing, promotional materials, invitations, visiting cards and framing options.'],
 ]
-
 export default function WhyChooseUs() {
-  return (
-    <section id="why-choose-us" className="bg-brand-dark px-6 py-24">
-      <div className="mx-auto max-w-2xl text-center">
-        <p className="text-xs font-semibold uppercase tracking-widest text-brand-secondary">
-          Why Customers Trust Us
-        </p>
-        <h2 className="mt-3 text-4xl font-extrabold text-white md:text-5xl">
-          Why Choose <span className="text-gradient">RR Digi Media</span>?
-        </h2>
-        <div
-          className="mx-auto mt-4 h-1 w-16 rounded-full"
-          style={{
-            background: 'linear-gradient(135deg, #D92B2B 0%, #F47920 100%)',
-          }}
-        />
-        <p className="mt-4 text-base text-slate-400">
-          Quality, speed, and honest pricing - every order, every time.
-        </p>
-      </div>
-
-      <div className="mx-auto mt-16 grid max-w-6xl grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
-        {features.map((feature) => (
-          <article
-            key={feature.title}
-            className="rounded-2xl border border-white/10 bg-white/5 p-7 transition-all duration-300 hover:border-brand-primary/40 hover:bg-white/10"
-          >
-            <div className="mb-5 flex h-12 w-12 items-center justify-center rounded-2xl bg-white/10 text-2xl">
-              {feature.emoji}
-            </div>
-            <h3 className="text-lg font-bold text-white">{feature.title}</h3>
-            <p className="mt-2 text-sm leading-relaxed text-slate-400">
-              {feature.description}
-            </p>
-            <div
-              className="mt-5 h-0.5 w-8 rounded-full"
-              style={{
-                background: 'linear-gradient(135deg, #D92B2B 0%, #F47920 100%)',
-              }}
-            />
-          </article>
-        ))}
-      </div>
-    </section>
-  )
+  return <section className="bg-brand-dark px-5 py-16 text-white sm:px-8 lg:py-24"><div className="mx-auto grid max-w-7xl gap-12 lg:grid-cols-[.8fr_1.2fr]"><div><p className="eyebrow !text-brand-secondary">A reliable local counter</p><h2 className="display mt-4 max-w-md text-4xl leading-none sm:text-5xl">The work is personal. The process should be, too.</h2><p className="mt-6 max-w-md text-base leading-7 text-white/65">Whether it is one important occasion or a full run of printed material, start with a clear conversation about the job.</p></div><div className="divide-y divide-white/15 border-t border-white/15">{qualities.map(([number, title, description]) => <article key={number} className="grid gap-3 py-7 sm:grid-cols-[4rem_1fr] sm:gap-6"><span className="text-xs font-bold tracking-[.16em] text-brand-secondary">{number}</span><div><h3 className="text-xl font-bold">{title}</h3><p className="mt-2 max-w-xl text-sm leading-6 text-white/65">{description}</p></div></article>)}</div></div></section>
 }
